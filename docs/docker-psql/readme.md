@@ -4,13 +4,7 @@
 
 # Ссылки
 
-* [Настройка репликации PostgreSQL в контейнерах Docker](https://www.dmosk.ru/miniinstruktions.php?mi ni=postgresql-replication-docker&ysclid=m76fgdphx8968237571) - не особо удачная реализация
-
-* [Посмотреть тут](https://dev.to/ietxaniz/practical-postgresql-logical-replication-setting-up-an-experimentation-environment-using-docker-4h50?ysclid=m76ffadatt332013864)
-
-* [Более толково](https://yourtodo.life/ru/posts/nastrojka-i-vosstanovlenie-postgresql-s-wal-podrobnoe-rukovodstvo/)
-
-* [Инициализация PostgreSQL в DockerCompose связке](https://stackoverflow.com/questions/26598738/how-to-create-user-database-in-script-for-docker-postgres)
+* [Настройка репликации PostgreSQL в контейнерах Docker](https://www.dmosk.ru/miniinstruktions.php?mi ni=postgresql-replication-docker&ysclid=m76fgdphx8968237571)
 
 * [Работа с несколькими базами данных в Ruby on Rails приложении](https://rusrails.ru/active-record-multiple-databases#soedinenie-s-bazami-dannyh-bez-upravleniya-shemoy-i-migratsiyami)
 
