@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :author do
-    first_name { FFaker::NameRU.first_name }
-    last_name { FFaker::NameRU.last_name }
+    first_name { FFaker::NameRU.unique.first_name }
+    last_name { FFaker::NameRU.unique.last_name }
     books_count { 0 }
   end
 

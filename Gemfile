@@ -29,12 +29,18 @@ gem 'activeadmin'
 gem 'activeadmin_addons'
 gem 'devise'
 
+# Сериализация
+gem 'alba'
+gem 'oj'
+
 group :development, :test do
   gem 'bundler-audit'
   gem 'capybara'
+  gem 'database_cleaner'
   gem 'database_consistency', require: false
   gem 'debug', platforms: %i[ mri windows ], require: 'debug/prelude'
   gem 'dotenv'
+  gem 'json-schema'
   gem 'fasterer'
   gem 'factory_bot_rails'
   gem 'ffaker'
@@ -42,6 +48,7 @@ group :development, :test do
   gem 'rubocop-rails', require: false
   gem 'rubocop-rspec', require: false
   gem 'rubocop-rails-omakase', require: false
+  gem 'test-prof', '~> 1.0' # Rspec, FactoryBot profiler
   gem 'rspec-rails', '>= 7.1'
   gem 'simplecov', require: false
   gem 'shoulda-matchers'

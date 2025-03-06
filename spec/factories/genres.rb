@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :genre do
-    slug { FFaker::Internet.slug }
-    name { FFaker::Book.genre }
+    slug { FFaker::Internet.unique.slug }
+    name { FFaker::Book.unique.genre }
     genre_group
   end
 

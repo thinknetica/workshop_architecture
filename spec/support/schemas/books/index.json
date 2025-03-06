@@ -1,0 +1,26 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": { "type": "string", "format": "uuid" },
+      "title": { "type": "string" },
+      "authors": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": { "type": "string" }
+          }
+        }
+      },
+      "language": {
+        "type": "object",
+        "properties": {
+          "slug": { "type": "string" }
+        }
+      }
+    },
+    "required": ["title", "authors", "language"]
+  }
+}
