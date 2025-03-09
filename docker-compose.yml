@@ -27,6 +27,17 @@ services:
     env_file:
       - ./.env.postgresql
 
+  mongo:
+    image: mongo
+    container_name: mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_db:/data/db
+    networks:
+      - db-repl
+
   web:
     tty: true
     stdin_open: true
@@ -48,6 +59,7 @@ services:
       - "3000:3000"
     depends_on:
       - postgresql_master
+      - mongo
       - redis
     environment:
       RAILS_LOG_TO_STDOUT: 'yes'
@@ -72,3 +84,4 @@ networks:
 volumes:
   db:
   redis:
+  mongo_db:
