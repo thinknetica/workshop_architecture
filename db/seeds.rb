@@ -9,5 +9,4 @@ else
   Seeds::LanguageLoad.call(filename: 'db/seeds/languages.yml')
 end
 
-AdminUser.create_with(password: ENV['SEED_EMAIL'])
-         .find_or_create_by(email: ENV['SEED_EMAIL'])
+AdminUser.create_with(password: ENV['SEED_PASSWORD']).find_or_create_by(email: ENV['SEED_EMAIL'])
