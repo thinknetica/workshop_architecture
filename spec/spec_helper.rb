@@ -1,3 +1,5 @@
+require 'test_prof/recipes/rspec/let_it_be'
+
 require 'simplecov'
 SimpleCov.start 'rails' do
   add_filter '/config/'

@@ -24,7 +24,7 @@ FactoryBot.define do
   end
 
   factory :book_with_authors, parent: :book do
-    folder { create(:folder, name: 'extract.zip') }
+    folder { association(:folder, name: 'extract.zip') }
     authors { [ association(:author) ] }
     genres { [ association(:genre) ] }
     keywords { [ association(:keyword) ] }

@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :keyword do
-    name { FFaker::Book.genre }
+    name { FFaker::Book.unique.genre }
   end
 
   factory :invalid_keyword, parent: :keyword do
