@@ -33,5 +33,21 @@ services:
       POSTGRES_HOST: 'db'
       POSTGRES_USER: 'postgres'
       POSTGRES_PASSWORD: 'postgres'
+  mongodb:
+    image: mongo:6.0
+    container_name: mongodb
+    restart: always
+    networks:
+      - default
+    volumes:
+      - ./data/mongodb:/data/db
+    # environment:
+    #   MONGO_INITDB_ROOT_USERNAME: mongoroot
+    #   MONGO_INITDB_ROOT_PASSWORD: mongosecret
+    links:
+      - "db:db"
+      - "web:web"
+    ports:
+      - "27017:27017"
 volumes:
   db:
