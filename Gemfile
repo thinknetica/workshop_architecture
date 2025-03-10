@@ -5,6 +5,10 @@ gem 'puma', '>= 6.5.0'
 
 # Базы данных
 gem 'pg'
+gem 'redis-actionpack' # hiredes
+
+# Mongo DB
+gem 'mongoid'
 
 # Многопоточное выполнение
 gem 'parallel'
@@ -28,6 +32,12 @@ gem 'config'
 gem 'activeadmin'
 gem 'activeadmin_addons'
 gem 'devise'
+
+# JSON Сериализатор
+gem 'alba'
+
+# Пагинация
+gem 'kaminari'
 
 group :development, :test do
   gem 'bundler-audit'
