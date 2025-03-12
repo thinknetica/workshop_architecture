@@ -33,5 +33,6 @@ services:
       POSTGRES_HOST: 'db'
       POSTGRES_USER: 'postgres'
       POSTGRES_PASSWORD: 'postgres'
+      RAILS_ENV: development
 volumes:
   db:
