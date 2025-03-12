@@ -32,6 +32,9 @@ gem 'devise'
 # Сериализация данных
 gem 'alba'
 
+# Пагинация
+gem 'kaminari'
+
 group :development, :test do
   gem 'bundler-audit'
   gem 'capybara'

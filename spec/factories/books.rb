@@ -1,6 +1,7 @@
 FactoryBot.define do
   factory :book do
     title { FFaker::Book.title }
+    insno { FFaker::Book.isbn }
     libid { 3064 }
     size { 9836 }
     filename { 3064 }
