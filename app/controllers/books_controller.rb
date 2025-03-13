@@ -1,12 +1,15 @@
 class BooksController < ApplicationController
-  include Pagination
   def index
-    query = Book.includes(:authors, :genres, :keywords, :folder, :language)
+    query = Mongo::Book.all.page(params[:page]).per(Settings.app.items_per_page)
 
-    render json: paginate_json(
-      scope: query,
-      key: :books,
-      serializer: BookSerializer
-    )
+    render json: {
+      books: query,
+      pagination: {
+        page: query.current_page,
+        per_page: query.limit_value,
+        page_count: query.total_pages,
+        total: query.total_count
+      }
+    }
   end
 end

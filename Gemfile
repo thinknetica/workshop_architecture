@@ -5,6 +5,7 @@ gem 'puma', '>= 6.5.0'
 
 # Базы данных
 gem 'pg'
+gem 'mongoid'
 
 # Многопоточное выполнение
 gem 'parallel'
@@ -30,7 +31,8 @@ gem 'activeadmin_addons'
 gem 'devise'
 
 gem 'alba'
-gem 'pagy'
+gem 'kaminari'
+gem 'kaminari-mongoid'
 
 group :development, :test do
   gem 'bundler-audit'
