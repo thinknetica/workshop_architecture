@@ -33,5 +33,29 @@ services:
       POSTGRES_HOST: 'db'
       POSTGRES_USER: 'postgres'
       POSTGRES_PASSWORD: 'postgres'
+
+  redis:
+    image: redis:7.2-alpine
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --save 60 1 --loglevel warning
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.9.0
+    environment:
+      - discovery.type=single-node
+      - ES_JAVA_OPTS=-Xms512m -Xmx512m
+      - xpack.security.enabled=false
+    volumes:
+      - elastic_data:/usr/share/elasticsearch/data
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+
 volumes:
   db:
+  elastic_data:
+  redis_data:

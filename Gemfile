@@ -32,6 +32,9 @@ gem 'devise'
 # JSON сериалайзер
 gem 'alba'
 
+gem 'elasticsearch'
+gem 'elasticsearch-model'
+
 group :development, :test do
   gem 'bundler-audit'
   gem 'capybara'

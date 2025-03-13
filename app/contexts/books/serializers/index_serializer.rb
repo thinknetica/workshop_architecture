@@ -1,4 +1,4 @@
-class Books::IndexSerializer
+class Books::Serializers::IndexSerializer
   def initialize(books, pagination_meta)
     @books = books
     @pagination_meta = pagination_meta
@@ -20,4 +20,3 @@ class Books::IndexSerializer
     )
   end
 end
-
