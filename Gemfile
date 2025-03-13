@@ -5,6 +5,7 @@ gem 'puma', '>= 6.5.0'
 
 # Базы данных
 gem 'pg'
+gem 'mongoid'
 
 # Многопоточное выполнение
 gem 'parallel'
@@ -13,6 +14,9 @@ gem 'activerecord-import'
 # Обеспечение работы представлений и JavaScript
 gem 'sprockets-rails'
 gem 'slim-rails'
+
+# Serializers
+gem 'jbuilder'
 
 # Распаковка архивов
 gem 'rubyzip', require: 'zip'
@@ -28,6 +32,12 @@ gem 'config'
 gem 'activeadmin'
 gem 'activeadmin_addons'
 gem 'devise'
+
+# Паджинация
+gem 'kaminari-mongoid'
+
+# Брокеры сообщений
+gem 'karafka', '~> 2.2'
 
 group :development, :test do
   gem 'bundler-audit'
