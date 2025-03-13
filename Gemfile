@@ -36,6 +36,9 @@ gem 'devise'
 # Паджинация
 gem 'kaminari-mongoid'
 
+# Брокеры сообщений
+gem 'karafka', '~> 2.2'
+
 group :development, :test do
   gem 'bundler-audit'
   gem 'capybara'

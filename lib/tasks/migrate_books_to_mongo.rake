@@ -7,9 +7,9 @@ namespace :migrate do
     # Получаем все книги из PostgreSQL
     books = pg_connection.execute("SELECT * FROM books")
 
-    books.each do |book|
+    books.in_batches do |book|
       # Создаем книгу в MongoDB
-      mongo_book = Mongo::BookMongo.new(
+      mongo_book = Documents::Book.new(
         id: book['id'],
         created_at: book['created_at'],
         updated_at: book['updated_at'],

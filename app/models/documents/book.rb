@@ -1,5 +1,5 @@
-module Mongo
-  class BookMongo
+module Documents
+  class Book
     include Mongoid::Document
     include Mongoid::Timestamps
 

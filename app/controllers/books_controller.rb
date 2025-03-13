@@ -1,8 +1,9 @@
 class BooksController < ApplicationController
   def index
-    page = params[:page].to_i.positive? ? params[:page].to_i : 1
+    @books = Documents::Book.all.page(params[:page])
 
-    @books = Mongo::BookMongo.all.page(page)
+    # Продьюсим событие в Кафка, которое показывает, какая страница была открыта
+    BooksProducer.page_opened(42)
 
     render formats: :json
   end
