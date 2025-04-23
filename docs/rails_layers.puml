@@ -1,0 +1,21 @@
+@startuml
+
+actor User
+
+participant "Router" as Routing
+participant "Controller" as Controller
+participant "Model" as Model
+participant "Business Logic" as BusinessLogic
+participant "Serializer" as Serializer
+
+User -> Routing: HTTP Request
+Routing -> Controller: Routes to Controller
+Controller -> BusinessLogic: Some Business Logic
+BusinessLogic -> Model: Query
+Model -> BusinessLogic: Records
+BusinessLogic -> Controller: Processed Data
+Controller -> Serializer: Serialize
+Serializer -> Controller: Serialized Data
+Controller -> User: HTTP Response
+
+@enduml
